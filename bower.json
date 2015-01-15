@@ -1,0 +1,14 @@
+{
+  "author": "Alexey Guryanov",
+  "name": "kg-web",
+  "email": "guryanov@kg.ru",
+  "version": "0.0.0",
+  "ignore": [
+    ".enb/tmp",
+    "node_modules",
+    "libs"
+  ],
+  "dependencies": {
+    "bem-core": "v2.5.0"
+  }
+}
