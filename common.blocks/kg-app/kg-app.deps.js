@@ -3,10 +3,11 @@
     shouldDeps: [{
       elems: [
         "content",
+        "topbar",
         "menu",
         "sidebar",
         "toolbar",
-        "topbar"
+        "page-nav"
       ]
     }]
 });

@@ -37,7 +37,8 @@ module.exports = function(bh) {
           '<![endif]-->'
       ],
       scripts: [
-          { elem: 'js', url: 'index.js' }
+          { elem: 'js', url: 'index.js' },
+          { elem: 'js', url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js' }
       ],
       content: ctx.json()
     };
