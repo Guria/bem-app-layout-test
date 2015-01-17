@@ -1,8 +1,13 @@
 var header = document.querySelector('.app-header');
+var headerScrollTop = 0;
 document.querySelector('.kg-app__content').addEventListener('scroll',function(){
-  if(this.scrollTop) {
+  var delta = this.scrollTop - headerScrollTop;
+  console.log(delta);
+  if(delta > 110) {
     classie.add(header, 'app-header_mini');
-  } else {
+    headerScrollTop = this.scrollTop;
+  } else if (delta < -90) {
     classie.remove(header, 'app-header_mini');
+      headerScrollTop = this.scrollTop;
   }
 });
