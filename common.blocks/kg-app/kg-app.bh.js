@@ -46,4 +46,16 @@ module.exports = function(bh) {
   bh.match('page__head', function(ctx) {
     ctx.json()['x-ua-compatible'] = 'IE=10';
   });
+  bh.match('kg-app__topbar', function(ctx) {
+    ctx.tag('header');
+  });
+  bh.match('kg-app__page-nav', function(ctx) {
+    ctx.tag('nav');
+  });
+  bh.match('kg-app__menu', function(ctx) {
+    ctx.tag('nav');
+  });
+  bh.match('kg-app__content', function(ctx) {
+    ctx.tag('main');
+  });
 };
