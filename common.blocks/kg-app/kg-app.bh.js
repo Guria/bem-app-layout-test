@@ -13,8 +13,8 @@ module.exports = function(bh) {
       },
       null // in case we would like to have bottombar
     ];
-    // place topbar element first and all others into content-wrap
-    // other items placed into content
+    // place 'topbar' element first and all others into 'content-wrap'
+    // other items placed into 'content'
     [].concat(ctx.json().content).forEach(function(elem){
       if(!ctx.isSimple(elem) && ('elem' in elem)) {
         if(elem.elem == 'topbar') {
@@ -27,7 +27,7 @@ module.exports = function(bh) {
       }
     });
     ctx.content(content, true);
-    return {
+    return { // wrap with 'page' block
       block: 'page',
       title: json.title,
       styles: [
@@ -38,18 +38,12 @@ module.exports = function(bh) {
       ],
       scripts: [
         { elem: 'js', url: 'index.js' },
-        { elem: 'js', url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js' }
+        //{ elem: 'js', url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js' }
       ],
       content: ctx.json()
     };
   });
   bh.match('page__head', function(ctx) {
     ctx.json()['x-ua-compatible'] = 'IE=10';
-  });
-  bh.match('kg-app__content', function(ctx, json) {
-    return {
-      elem: 'content-wrap',
-      content: ctx.json()
-    };
   });
 };

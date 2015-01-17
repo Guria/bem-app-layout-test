@@ -8,6 +8,8 @@ module.exports = function(bh) {
       },
       null
     ];
+    // position 'logo' and 'actions' elems
+    // all other items placed in flex 'spacer'
     [].concat(ctx.json().content).forEach(function(elem){
       if(!ctx.isSimple(elem) && ('elem' in elem)) {
         if(elem.elem == 'logo') {
