@@ -31,17 +31,20 @@ module.exports = function(bh) {
       block: 'page',
       title: json.title,
       styles: [
-          { elem: 'css', url: 'index.css' },
-          '<!--[if IE]>',
-              { elem: 'css', url: 'index.ie.css' },
-          '<![endif]-->'
+        { elem: 'css', url: 'index.css' },
+        '<!--[if IE]>',
+          { elem: 'css', url: 'index.ie.css' },
+        '<![endif]-->'
       ],
       scripts: [
-          { elem: 'js', url: 'index.js' },
-          { elem: 'js', url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js' }
+        { elem: 'js', url: 'index.js' },
+        { elem: 'js', url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js' }
       ],
       content: ctx.json()
     };
+  });
+  bh.match('page__head', function(ctx) {
+    ctx.json()['x-ua-compatible'] = 'IE=10';
   });
   bh.match('kg-app__content', function(ctx, json) {
     return {

@@ -1,4 +1,21 @@
 .app-header__search
   width 128px
-  order 3
+  order 0
   background-color #CCCCFF
+  display flex
+  flex-flow row nowrap
+  align-items stretch
+.app-header__search-button
+  width 128px
+  background-color #FFCC33
+  transition all 0.5s ease-out
+.app-header__search-field
+  position absolute
+  display flex
+  height 100%
+  background-color wheat
+  left 1800px
+  right 128px
+  transition all 0.5s ease-out
+  .app-header_search-active &
+    left 64px

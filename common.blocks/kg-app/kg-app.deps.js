@@ -1,5 +1,8 @@
 ({
-    mustDeps : 'page',
+    mustDeps : [
+      'page',
+      'classie'
+    ],
     shouldDeps: [{
       elems: [
         "content",
