@@ -16,7 +16,7 @@ module.exports = function(bh) {
     // place topbar element first and all others into content-wrap
     // other items placed into content
     [].concat(ctx.json().content).forEach(function(elem){
-      if('elem' in elem) {
+      if(!ctx.isSimple(elem) && ('elem' in elem)) {
         if(elem.elem == 'topbar') {
           content[0] = elem;
         } else {

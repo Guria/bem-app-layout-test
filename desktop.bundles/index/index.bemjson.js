@@ -8,10 +8,13 @@
         block: 'app-header',
         content: [
           {
-            elem: 'logo'
+            elem: 'logo',
+            content: 'logo'
           },
           {
             elem: 'location-info',
+            content: 'location-info',
+/*
             location: {
               title: 'Science equipment for ISS',
               path: [
@@ -33,6 +36,7 @@
               },
               bookmarked: true
             }
+*/
           },
           {
             elem: 'search',
@@ -40,19 +44,23 @@
           },
           {
             elem: 'actions',
+            content: 'actions',
             actions: [ 'menu-button' ]
           }
         ]
       }
     },
+    'content',
     {
       elem: 'menu',
       content: {
-        block: 'menu'
+        block: 'menu',
+        content: 'menu'
       }
     },
     {
-      elem: 'page-nav'
+      elem: 'page-nav',
+      content: 'page-nav'
     },
     {
       block: 'vesna'
