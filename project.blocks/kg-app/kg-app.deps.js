@@ -1,0 +1,6 @@
+({
+    mustDeps : [
+      'app-header',
+      'logo'
+    ]
+});

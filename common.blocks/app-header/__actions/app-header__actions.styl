@@ -1,5 +1,26 @@
 .app-header__actions
   width 128px
   order 2
-  background-color #CCFF99
   z-index 1
+  background #F5F5F5
+  text-align center
+  align-self center
+  display flex
+  flex-flow column
+  align-items center
+  justify-content center
+  color #3E525C
+  text-decoration none
+  outline 1px solid #B3B3B3
+  outline-offset -1px
+  height inherit
+  padding-left 8px
+  &:hover
+    transition all 0.3s ease-in
+    background-color #3E525C
+    color white
+  .app-header_mini & > span
+      display none
+  //& > span
+    //flex 0 0.0001 1em
+  

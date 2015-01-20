@@ -4,7 +4,12 @@ module.exports = function(bh) {
       null,
       {
         elem: 'spacer',
-        content: []
+        content: [
+          {
+            elem: 'location-info',
+            content: []
+          }
+        ]
       },
       null
     ];
@@ -16,6 +21,8 @@ module.exports = function(bh) {
           content[0] = elem;
         } else if (elem.elem == 'actions') {
           content[2] = elem;
+        } else if (elem.elem.lastIndexOf('location', 0) === 0) {
+          content[1].content[0].content.push(elem);
         } else {
           content[1].content.push(elem);
         }

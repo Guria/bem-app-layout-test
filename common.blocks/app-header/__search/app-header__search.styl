@@ -1,21 +1,38 @@
 .app-header__search
-  width 128px
+  width 160px
   order 2
-  background-color #CCCCFF
+  background white
+  color black
   display flex
   flex-flow row nowrap
   align-items stretch
+  height inherit
 .app-header__search-button
-  width 128px
-  background-color #FFCC33
-  transition all 0.5s ease-out
+  width 100%
+  text-align center
+  align-self center
+  display flex
+  align-items center
+  color #3E525C
+  text-decoration none
+  outline 1px solid #B3B3B3
+  outline-offset -1px
+  height inherit
+  padding-left 8px
+  .app-header_search-active &
+  &:hover
+    transition all 0.3s ease-in
+    background-color #3E525C
+    color white
 .app-header__search-field
   position absolute
   display flex
   height 100%
-  background-color wheat
+  background white
   left 1800px
   right 0
+  outline 1px solid #B3B3B3
+  outline-offset -1px
   transition all 0.5s ease-out
   align-items center
   .app-header_search-active &
@@ -27,13 +44,23 @@
   flex-direction column
   justify-content center
   text-align center
+  background-color #3E525C
+  color white
 .app-header__search-tags
   flex 0 0 auto
-  background-color aquamarine
   padding 4px
   margin 4px
 .app-header__search-input
- flex 1 1 auto
+  flex 1 1 auto
+  padding-left 8px
+  height 100%
+  outline 0
+  background-color transparent
+  border 0px solid
+  font-size 1.3em
+  visibility hidden
+  .app-header_search-active &
+    visibility visible
 .app-header__search-close
   flex 0 0 64px
   height inherit
@@ -41,3 +68,8 @@
   flex-direction column
   justify-content center
   text-align center
+  text-decoration none
+  color #8C9EA7
+  visibility hidden
+  .app-header_search-active &
+    visibility visible

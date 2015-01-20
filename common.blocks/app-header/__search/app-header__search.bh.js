@@ -3,14 +3,13 @@ module.exports = function(bh) {
     ctx.content([
       {
         elem: 'search-button',
-        content: 'search-button'
       },
       {
         elem: 'search-field',
         content: [
           {
             elem: 'search-icon',
-            content: 'search-icon'
+            cls: 'fa fa-2x fa-search'
           },
           {
             elem: 'search-tags',
@@ -18,14 +17,41 @@ module.exports = function(bh) {
           },
           {
             elem: 'search-input',
-            content: 'search-input'
           },
           {
             elem: 'search-close',
-            content: 'search-close'
           },
         ]
       }
     ]);
+  });
+  bh.match('app-header__search-button', function(ctx, json) {
+    ctx
+      .tag('a')
+      .attrs({ href: '#'})
+      .content([
+        {
+          tag: 'i',
+          cls: 'fa fa-2x fa-search'
+        },
+        {
+          tag: 'span',
+          content: 'Search'
+        }
+      ]);
+  });
+  bh.match('app-header__search-close', function(ctx, json) {
+    ctx
+      .tag('a')
+      .attrs({ href: '#'})
+      .content({
+        tag: 'i',
+        cls: 'fa fa-2x fa-close',
+        attrs: { tabindex: '-1'}
+      });
+  });
+  bh.match('app-header__search-input', function(ctx, json) {
+    ctx
+      .tag('input')
   });
 };

@@ -1,7 +1,9 @@
 ({
     mustDeps : [
       'page',
-      'classie'
+      'classie',
+      'app-header',
+      'logo'
     ],
     shouldDeps: [{
       elems: [
