@@ -2,7 +2,6 @@ var header = document.querySelector('.app-header');
 var headerScrollTop = 0;
 document.querySelector('.kg-app__content').addEventListener('scroll',function(){
   var delta = this.scrollTop - headerScrollTop;
-  console.log(delta);
   if(delta > 110) {
     classie.add(header, 'app-header_mini');
     headerScrollTop = this.scrollTop;
