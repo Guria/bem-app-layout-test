@@ -31,13 +31,13 @@ module.exports = function(bh) {
       block: 'page',
       title: json.title,
       styles: [
-        { elem: 'css', url: 'index.css' },
+        { elem: 'css', url: '_index.css' },
         '<!--[if IE]>',
-          { elem: 'css', url: 'index.ie.css' },
+          { elem: 'css', url: '_index.ie.css' },
         '<![endif]-->'
       ],
       scripts: [
-        { elem: 'js', url: 'index.js' },
+        { elem: 'js', url: '_index.js' },
         //{ elem: 'js', url: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js' }
       ],
       content: ctx.json()
