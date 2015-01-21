@@ -20,6 +20,9 @@
   },
   content: [
     {
+      block: 'demo'
+    },
+    {
       block: 'vesna'
     },
   ]
