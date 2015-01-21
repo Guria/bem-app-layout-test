@@ -1,10 +1,23 @@
-document.querySelector( '.app-header__search-button' ).onclick = function() {
-  classie.add(document.querySelector( '.app-header' ), 'app-header_search-active');
-  //document.querySelector( '.app-header__search-input' ).focus();
-};
-document.querySelector( '.app-header__search-close' ).onclick = function() {
-  classie.remove(document.querySelector( '.app-header' ), 'app-header_search-active');
-};
-document.querySelector( '.app-header__search-field' ).addEventListener("transitionend", function(){
-  document.querySelector( '.app-header__search-input' ).focus();
+[].slice.call(document.querySelectorAll( '.app-header__search-button' )).forEach(function(el){
+  el.onclick = function() {
+    [].slice.call( document.querySelectorAll('.app-header')).forEach(function(el) {
+      classie.add(el, 'app-header_search-active');
+    });
+  };
+});
+
+[].slice.call(document.querySelectorAll( '.app-header__search-close' )).forEach(function(el){
+  el.onclick = function() {
+    [].slice.call( document.querySelectorAll('.app-header')).forEach(function(el) {
+      classie.remove(el, 'app-header_search-active');
+    });
+  };
+});
+
+[].slice.call(document.querySelectorAll( '.app-header__search-field' )).forEach(function(el){
+  el.addEventListener("transitionend", function(){
+    [].slice.call( document.querySelectorAll('.app-header__search-input')).forEach(function(el) {
+      el.focus();
+    });
+  });
 }, false);
