@@ -6,17 +6,14 @@ module.exports = function(bh) {
         mix: { block: 'logo' }
       },
       {
-        elem: 'location-title',
-        content: 'location-title'
+        elem: 'location-title'
       },
       {
-        elem: 'location-path',
-        content: 'location-path'
+        elem: 'location-path'
       },
       {
         elem: 'location-meta',
-        mod: 'date',
-        content: 'location-date'
+        mod: 'date'
       },
       {
         elem: 'bookmark'

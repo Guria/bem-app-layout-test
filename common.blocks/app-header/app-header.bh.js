@@ -30,6 +30,7 @@ module.exports = function(bh) {
         content[1].content.push(elem);
       }
     });
+    ctx.tParam('location', json.location);
     ctx.content(content, true);
   });
 };

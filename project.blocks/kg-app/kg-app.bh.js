@@ -5,6 +5,7 @@ module.exports = function(bh) {
         elem: 'topbar',
         content: {
           block: 'app-header',
+          location: json.location
         }
       },
       {
