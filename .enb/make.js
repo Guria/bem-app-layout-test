@@ -15,7 +15,10 @@ module.exports = function (config) {
 			    sourceSuffixes: ['css', 'ie.css']
 			}],
 			// browser.js
-			[require('enb-diverse-js/techs/browser-js'), { target: '?.browser.js' }],
+			[require('enb-borschik/techs/js-borschik-include'), {
+				target: '?.browser.js',
+				sourceSuffixes: ['vanilla.js', 'browser.js', 'js']
+			}],
 			[require('enb/techs/file-merge'), {
 			    target: '?.pre.js',
 			    sources: ['?.browser.bh.js', '?.browser.js']
@@ -54,13 +57,26 @@ module.exports = function (config) {
 			    mimic: 'BEMHTML'
 			}],
 			// html
-			[require('enb-bh/techs/html-from-bemjson')]
+			[require('enb-bh/techs/html-from-bemjson')],
+			// borschik
+			[require('enb-borschik/techs/borschik'), {
+				source: '?.js', target: '_?.js',
+				freeze: true, minify: isProd
+			}],
+			[require('enb-borschik/techs/borschik'), {
+				source: '?.css', target: '_?.css',
+				tech: 'cleancss', freeze: true, minify: isProd
+			}],
+			[require('enb-borschik/techs/borschik'), {
+				source: '?.css', target: '_?.ie.css',
+				tech: 'cleancss', freeze: true, minify: isProd
+			}]
         ]);
 
         nodeConfig.addTargets([
-			'?.css',
-			'?.ie.css',
-			'?.js',
+			'_?.css',
+			'_?.ie.css',
+			'_?.js',
 			'?.bh.js',
 			'?.html'
         ]);
