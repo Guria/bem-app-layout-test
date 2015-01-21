@@ -9,6 +9,7 @@
     "libs"
   ],
   "dependencies": {
-    "bem-core": "v2.5.0"
+    "bem-core": "v2.5.0",
+    "classie": "~1.0.1"
   }
 }
