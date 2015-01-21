@@ -10,6 +10,7 @@
   ],
   "dependencies": {
     "bem-core": "v2.5.0",
-    "classie": "~1.0.1"
+    "classie": "~1.0.1",
+    "font-awesome": "~4.2.0"
   }
 }
